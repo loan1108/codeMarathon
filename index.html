@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function solve(parentString, childString) {
+        // Write your code here
+        let newParentArr = parentString.split(" ");
+        let newChildArr = childString.split(" ");
+        console.log(newParentArr,newChildArr)
+        let compareArr = [];
+        let count = 0;
+        if (newParentArr.length >= newChildArr.length) {
+          for (let i = 0; i < newChildArr.length; ) {
+           
+            
+            for (let j = 0; j < newParentArr.length; j++) {
+              
+              if (newChildArr[i] != newParentArr[j]) {           
+                count +=1;
+                console.log(count)
+              }
+            }
+            compareArr.push(count);
+          }
+        }
+       return compareArr;
+      }
+      let parentString = "1 4 1 2 3 5 2 3 3";
+      let childString = "1 2 3 4"
+      console.log(solve(parentString,childString))
+    </script>
+  </body>
+</html>
